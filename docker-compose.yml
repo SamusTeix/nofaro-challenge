@@ -1,0 +1,45 @@
+version: '2'
+services:
+  nginx:
+    image: shippingdocker/nginx:latest
+    environment:
+      - cluster.name=docker-cluster
+    ports:
+     - "8000:80"
+    volumes:
+     - ./:/var/www/html
+    networks:
+     - appnet
+  php:
+    image: luisdalmolin/php:7.2
+    environment:
+      - cluster.name=docker-cluster
+    volumes:
+     - ./:/var/www/html
+    networks:
+     - appnet
+  redis:
+    image: redis:alpine
+    networks:
+     - appnet
+    volumes:
+     - data:/data/redis
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpasswd
+      MYSQL_DATABASE: nofaro
+      MYSQL_USER: nofaro
+      MYSQL_PASSWORD: secret
+    ports:
+     - "3306:3306"
+    volumes:
+     - data:/data/mysql
+    networks:
+     - appnet
+networks:
+  appnet:
+    driver: "bridge"
+volumes:
+  data:
+    driver: "local"
