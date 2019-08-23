@@ -25,6 +25,40 @@ Com ambos programas instalados e funcionais, iniciamos a instalação:
 `$ yarn install`
 
 
+#### Atualizando os componentes:
+
+Mac e Linux:
+
+`$ docker-compose exec php bash`
+
+`$ cd var/www/html`
+
+`$ composer update`
+
+
+Windows:
+
+`$ winpty docker-compose exec php bash`
+
+`$ cd var/www/html`
+
+`$ composer update`
+
+
+#### Criando arquivo .env:
+
+`$ cp .env.example .env`
+
+Altere as configurações do `.env` relacionadas ao banco de dados:
+
+`DB_CONNECTION=mysql
+DB_HOST=db
+DB_PORT=3306
+DB_DATABASE=nofaro
+DB_USERNAME=nofaro
+DB_PASSWORD=secret`
+
+
 #### Rodando a Migration:
 
 `$ php artisan migrate`
