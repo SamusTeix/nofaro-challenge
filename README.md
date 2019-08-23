@@ -35,6 +35,8 @@ Mac e Linux:
 
 `$ composer update`
 
+`$ exit`
+
 
 Windows:
 
@@ -44,6 +46,8 @@ Windows:
 
 `$ composer update`
 
+`$ exit`
+
 
 #### Criando arquivo .env:
 
@@ -52,10 +56,15 @@ Windows:
 Altere as configurações do `.env` relacionadas ao banco de dados:
 
 `DB_CONNECTION=mysql` 
+
 `DB_HOST=db` 
+
 `DB_PORT=3306` 
+
 `DB_DATABASE=nofaro` 
+
 `DB_USERNAME=nofaro` 
+
 `DB_PASSWORD=secret` 
 
 
@@ -71,8 +80,6 @@ Para rodar a `migration`, caso esteja no Windows, não poderá utilizar o artisa
 `$ cd var/www/html`
 
 `$ php artisan migrate`
-
-`$ exit`
 
 `$ exit`
 
