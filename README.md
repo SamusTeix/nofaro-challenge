@@ -51,17 +51,12 @@ Windows:
 
 Altere as configurações do `.env` relacionadas ao banco de dados:
 
-`DB_CONNECTION=mysql`
-
-`DB_HOST=db`
-
-`DB_PORT=3306`
-
-`DB_DATABASE=nofaro`
-
-`DB_USERNAME=nofaro`
-
-`DB_PASSWORD=secret`
+`DB_CONNECTION=mysql` 
+`DB_HOST=db` 
+`DB_PORT=3306` 
+`DB_DATABASE=nofaro` 
+`DB_USERNAME=nofaro` 
+`DB_PASSWORD=secret` 
 
 
 #### Rodando a Migration:
@@ -69,7 +64,7 @@ Altere as configurações do `.env` relacionadas ao banco de dados:
 `$ php artisan migrate`
 
 
-##### Para rodar a `migration`, caso esteja no Windows, não poderá utilizar o artisan fora do container. Utilize os comandos abaixo:
+Para rodar a `migration`, caso esteja no Windows, não poderá utilizar o artisan fora do container. Utilize os comandos abaixo:
 
 `$ winpty docker-compose exec php bash`
 
