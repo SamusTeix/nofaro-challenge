@@ -51,17 +51,17 @@ Windows:
 
 Altere as configurações do `.env` relacionadas ao banco de dados:
 
-`DB_CONNECTION=mysql
+`DB_CONNECTION=mysql`
 
-DB_HOST=db
+`DB_HOST=db`
 
-DB_PORT=3306
+`DB_PORT=3306`
 
-DB_DATABASE=nofaro
+`DB_DATABASE=nofaro`
 
-DB_USERNAME=nofaro
+`DB_USERNAME=nofaro`
 
-DB_PASSWORD=secret`
+`DB_PASSWORD=secret`
 
 
 #### Rodando a Migration:
